@@ -58,19 +58,23 @@
                         @csrf
                         <div class="input-group input-group-outline mb-3">
                         <label class="form-label" for="name">Nama</label>
-                        <input type="text" class="form-control" name="name" id="name" required autocomplete="name">
+                        <input type="text" class="form-control" name="name" id="name" required
                         </div>
                         <div class="input-group input-group-outline mb-3">
-                        <label class="form-label" for="email">Email</label>
-                        <input type="email" class="form-control" name="email" id="email" required autocomplete="email">
+                          <label class="form-label" for="email">Email</label>
+                          <input type="email" class="form-control" name="email" id="email" required autocomplete="email">
                         </div>
                         <div class="input-group input-group-outline mb-3">
-                        <label class="form-label" for="password">Password</label>
-                        <input type="password" class="form-control" name="password" id="password" required autocomplete="new-password">
+                          <label class="form-label" for="password">Password</label>
+                          <input type="password" class="form-control" name="password" id="password" required autocomplete="new-password">
                         </div>
                         <div class="input-group input-group-outline mb-3">
-                        <label class="form-label" for="password-confirm">Konfirmasi Password</label>
-                        <input type="password" class="form-control" name="password_confirmation" id="password-confirm" required autocomplete="new-password">
+                          <label class="form-label" for="password-confirm">Konfirmasi Password</label>
+                          <input type="password" class="form-control" name="password_confirmation" id="password-confirm" required autocomplete="new-password">
+                        </div>
+                        <div class="input-group input-group-outline mb-3">
+                        <label class="form-label" for="level">Level</label>
+                        <input type="text" class="form-control" name="level" id="level" required autocomplete="level">
                         </div>
                         <div class="text-center">
                         <button type="submit" class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">Register</button>

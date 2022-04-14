@@ -17,8 +17,8 @@ Auth::routes();
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/', 'DashboardController@index');
     
-    Route::resource('/kelas', 'KelasController');
-    Route::resource('/siswa', 'SiswaController');
+    Route::resource('/kelas', 'KelasController')->middleware('ceklevel:admin');
+    Route::resource('/siswa', 'SiswaController')->middleware('ceklevel:admin');
 });
 
 // Route::get('/home', 'HomeController@index')->name('home');
