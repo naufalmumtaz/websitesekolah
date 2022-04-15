@@ -22,15 +22,15 @@
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">dashboard</i>
             </div>
-            <span class="nav-link-text ms-1">Dashboard</span>
+            <span class="nav-link-text ms-1">Dasbor</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white " href="../pages/tables.html">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">table_view</i>
+              <i class="material-icons opacity-10">calendar_month</i>
             </div>
-            <span class="nav-link-text ms-1">Live Classes</span>
+            <span class="nav-link-text ms-1">Ruang Meeting</span>
           </a>
         </li>
         <li class="nav-item">
@@ -38,7 +38,7 @@
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">message</i>
             </div>
-            <span class="nav-link-text ms-1">Messages</span>
+            <span class="nav-link-text ms-1">Pesan</span>
           </a>
         </li>
         <li class="nav-item">
@@ -46,7 +46,7 @@
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">book</i>
             </div>
-            <span class="nav-link-text ms-1">My Courses</span>
+            <span class="nav-link-text ms-1">Modul Saya</span>
           </a>
         </li>
         <li class="nav-item">
@@ -54,7 +54,7 @@
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">cases</i>
             </div>
-            <span class="nav-link-text ms-1">My Homework</span>
+            <span class="nav-link-text ms-1">Tugas Saya</span>
           </a>
         </li>
         <li class="nav-item">
@@ -62,12 +62,12 @@
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">notifications</i>
             </div>
-            <span class="nav-link-text ms-1">Notifications</span>
+            <span class="nav-link-text ms-1">Notifikasi</span>
           </a>
         </li>
         @if (auth()->user()->level=="admin")
           <li class="nav-item mt-3">
-            <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Admin pages</h6>
+            <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Halaman Admin</h6>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white " href="/siswa">
@@ -103,14 +103,14 @@
           </li>
         @endif
         <li class="nav-item mt-3">
-          <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
+          <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Halaman Akun</h6>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white " href="../pages/profile.html">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">manage_accounts</i>
             </div>
-            <span class="nav-link-text ms-1">Profile</span>
+            <span class="nav-link-text ms-1">Profil</span>
           </a>
         </li>
       </ul>

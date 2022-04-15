@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('judul')
-    Dashboard
+    Dasbor
 @endsection
 
 @section('content')
@@ -11,44 +11,86 @@
           <div class="card h-100">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
               <div class="bg-gradient-info shadow-info border-radius-lg pt-4 pb-3">
-                <h5 class="text-white text-capitalize ps-3"><i class="material-icons opacity-10">notifications</i> Notifications</h5>
+                <h5 class="text-white text-capitalize ps-3"><i class="material-icons opacity-10">notifications</i> Pengumuman</h5>
               </div>
             </div>
             <div class="card-body">
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Tanggal</th>
-                    <th>Pengumuman</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>15/4/2022</td>
-                    <td><a href="#">PENGUMUMAN AKADEMIK - TA...</a></td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="table-responsive">
+                <table class="table table-striped table-hover" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Tanggal</th>
+                            <th>Pengumuman</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>15/4/2021</td>
+                            <td class="text-wrap"><a href="#">PENGUMUMAN AKADEMIK - TATA TERTIB UJIAN PENDIDIKAN KESETARAAN (UPK) PERIODE 2021/2022</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-xl-6 col-sm-6 mb-xl-0 mb-4">
-          <div class="card">
-            <div class="card-header p-3 pt-2">
-              <div class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
-                <i class="material-icons opacity-10">group</i>
-              </div>
-              <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize">Jumlah Guru</p>
-                <h4 class="mb-0">3,462</h4>
+        <div class="col-xl-6 col-sm-6 mb-xl-0">
+          <div class="card h-100">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+              <div class="bg-gradient-info shadow-info border-radius-lg pt-4 pb-3">
+                <h5 class="text-white text-capitalize ps-3"><i class="material-icons opacity-10">calendar_month</i> Ruang Meeting</h5>
               </div>
             </div>
-            <hr class="dark horizontal my-0">
-            <div class="card-footer p-3">
-              <p class="mb-0"><a href="#" class="text-success text-sm font-weight-bolder">Detail Guru</a></p>
+            <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-striped table-hover" style="width:100%">
+                      <thead>
+                          <tr>
+                              <th>Tanggal</th>
+                              <th>Link Meet</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>15/4/2021</td>
+                              <td class="text-wrap"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, atque voluptatum. Fugit, voluptate eos dolor impedit maxime voluptatum ex aliquam.</a></td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
             </div>
           </div>
         </div>
+        <div class="col-xl-6 col-sm-6 mb-xl-0 mt-5">
+          <div class="card h-100">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+              <div class="bg-gradient-info shadow-info border-radius-lg pt-4 pb-3">
+                <h5 class="text-white text-capitalize ps-3"><i class="material-icons opacity-10">calendar_month</i> Tugas Tertunda</h5>
+              </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-striped table-hover" style="width:100%">
+                      <thead>
+                          <tr>
+                              <th>No</th>
+                              <th>Judul Tugas</th>
+                              <th>Tindakan</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>1</td>
+                              <td class="text-wrap"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, praesentium.</a></td>
+                              <td class="text-wrap"><a href="#" class="text-info text-capitalize">Detail</a></td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
   @endif
   @if (auth()->user()->level=="admin")
@@ -127,8 +169,8 @@
           <div class="col-12">
             <div class="card h-100">
               <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                  <h5 class="text-white text-capitalize ps-3"><i class="material-icons opacity-10">notifications</i> Notifications</h5>
+                <div class="bg-gradient-info shadow-info border-radius-lg pt-4 pb-3">
+                  <h5 class="text-white text-capitalize ps-3"><i class="material-icons opacity-10">notifications</i> Pengumuman</h5>
                 </div>
               </div>
               <div class="card-body">
