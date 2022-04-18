@@ -53,11 +53,11 @@
                                 <td>{{$value->kelas}}</td>
                                 <td>{{$value->created_at}}</td>
                                 <td class="d-flex">
-                                    <a href="/kelas/{{$value->id}}/edit" class="btn bg-gradient-info text-capitalize">Edit</a>
                                     <form action="/kelas/{{$value->id}}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <input type="submit" class="btn bg-gradient-danger text-capitalize ms-2" value="Delete">
+                                        <a href="/kelas/{{$value->id}}/edit" class="btn bg-gradient-info text-capitalize"><span class="material-icons text-white">edit</span></a>
+                                        <button type="submit" class="btn bg-gradient-danger text-capitalize ms-2"><span class="material-icons text-white">delete</span></button>
                                     </form>
                                 </td>
                             </tr>

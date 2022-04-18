@@ -24,10 +24,12 @@
                         </tr>
                     </thead>
                     <tbody>
+                      @foreach ($pengumuman as $item)
                         <tr>
-                            <td>15/4/2021</td>
-                            <td class="text-wrap"><a href="#">PENGUMUMAN AKADEMIK - TATA TERTIB UJIAN PENDIDIKAN KESETARAAN (UPK) PERIODE 2021/2022</a></td>
+                            <td>{{$item->created_at}}</td>
+                            <td class="text-wrap"><a href="/pengumuman/{{$item->id}}">{{Str::limit($item->judul, 20)}}</a></td>
                         </tr>
+                      @endforeach
                     </tbody>
                 </table>
               </div>
@@ -51,10 +53,12 @@
                           </tr>
                       </thead>
                       <tbody>
+                        @foreach ($pengumuman as $item)
                           <tr>
-                              <td>15/4/2021</td>
-                              <td class="text-wrap"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, atque voluptatum. Fugit, voluptate eos dolor impedit maxime voluptatum ex aliquam.</a></td>
+                              <td>{{$item->created_at}}</td>
+                              <td class="text-wrap"><a href="/meeting/{{$item->id}}">{{Str::limit($item->judul, 20)}}</a></td>
                           </tr>
+                        @endforeach
                       </tbody>
                   </table>
               </div>
@@ -169,32 +173,24 @@
           <div class="col-12">
             <div class="card h-100">
               <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                <div class="bg-gradient-info shadow-info border-radius-lg pt-4 pb-3">
+                <div class="bg-gradient-info shadow-info border-radius-lg pt-4 pb-3 d-flex justify-content-between">
                   <h5 class="text-white text-capitalize ps-3"><i class="material-icons opacity-10">notifications</i> Pengumuman</h5>
+                  <div class="text-end pe-3">
+                    <a href="/pengumuman/create"><span class="material-icons text-white">post_add</span></a>
+                  </div>
                 </div>
               </div>
               <div class="card-body">
                 <ul class="list-group">
-                  <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2 pt-0">
-                    <div class="avatar me-3">
-                      <img src="{{asset('admin/assets/img/marie.jpg')}}" alt="kal" class="border-radius-lg shadow">
-                    </div>
-                    <div class="d-flex align-items-start flex-column justify-content-center">
-                      <h6 class="mb-0 text-sm">Sophie B.</h6>
-                      <p class="mb-0 text-xs">Hi! I need more information..</p>
-                    </div>
-                    <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto" href="javascript:;">Reply</a>
-                  </li>
-                  <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
-                    <div class="avatar me-3">
-                      <img src="{{asset('admin/assets/img/marie.jpg')}}" alt="kal" class="border-radius-lg shadow">
-                    </div>
-                    <div class="d-flex align-items-start flex-column justify-content-center">
-                      <h6 class="mb-0 text-sm">Anne Marie</h6>
-                      <p class="mb-0 text-xs">Awesome work, can you..</p>
-                    </div>
-                    <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto" href="javascript:;">Reply</a>
-                  </li>
+                  @foreach ($pengumuman as $item)
+                    <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
+                      <div class="d-flex align-items-start flex-column justify-content-center">
+                        <h6 class="mb-0 text-sm">{{Str::limit($item->judul, 20)}}</h6>
+                        <p class="mb-0 text-xs">{{Str::limit($item->isi, 40)}}</p>
+                      </div>
+                      <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto" href="/pengumuman/{{$item->id}}">Detail</a>
+                    </li>
+                  @endforeach
                 </ul>
               </div>
             </div>

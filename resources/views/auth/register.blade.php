@@ -58,7 +58,7 @@
                         @csrf
                         <div class="input-group input-group-outline mb-3">
                         <label class="form-label" for="name">Nama</label>
-                        <input type="text" class="form-control" name="name" id="name" required
+                        <input type="text" class="form-control" name="name" id="name" required autocomplete="off">
                         </div>
                         <div class="input-group input-group-outline mb-3">
                           <label class="form-label" for="email">Email</label>
