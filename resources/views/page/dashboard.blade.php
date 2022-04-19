@@ -10,7 +10,7 @@
         <div class="col-xl-6 col-sm-6 mb-xl-0">
           <div class="card h-100">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-              <div class="bg-gradient-info shadow-info border-radius-lg pt-4 pb-3">
+              <div class="bg-gradient-warning shadow-warning border-radius-lg pt-4 pb-3">
                 <h5 class="text-white text-capitalize ps-3"><i class="material-icons opacity-10">notifications</i> Pengumuman</h5>
               </div>
             </div>
@@ -39,7 +39,7 @@
         <div class="col-xl-6 col-sm-6 mb-xl-0">
           <div class="card h-100">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-              <div class="bg-gradient-info shadow-info border-radius-lg pt-4 pb-3">
+              <div class="bg-gradient-success shadow-success border-radius-lg pt-4 pb-3">
                 <h5 class="text-white text-capitalize ps-3"><i class="material-icons opacity-10">calendar_month</i> Ruang Meeting</h5>
               </div>
             </div>
@@ -153,7 +153,7 @@
         <div class="col-xl-3 col-sm-6">
           <div class="card">
             <div class="card-header p-3 pt-2">
-              <div class="icon icon-lg icon-shape bg-gradient-warning shadow-warning text-center border-radius-xl mt-n4 position-absolute">
+              <div class="icon icon-lg icon-shape bg-gradient-danger shadow-danger text-center border-radius-xl mt-n4 position-absolute">
                 <i class="material-icons opacity-10">note</i>
               </div>
               <div class="text-end pt-1">
@@ -163,7 +163,7 @@
             </div>
             <hr class="dark horizontal my-0">
             <div class="card-footer p-3">
-              <p class="mb-0"><a href="#" class="text-warning text-sm font-weight-bolder">Detail Modul</a></p>
+              <p class="mb-0"><a href="#" class="text-danger text-sm font-weight-bolder">Detail Modul</a></p>
             </div>
           </div>
         </div>
@@ -173,7 +173,7 @@
           <div class="col-12">
             <div class="card h-100">
               <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                <div class="bg-gradient-info shadow-info border-radius-lg pt-4 pb-3 d-flex justify-content-between">
+                <div class="bg-gradient-warning shadow-warning border-radius-lg pt-4 pb-3 d-flex justify-content-between">
                   <h5 class="text-white text-capitalize ps-3"><i class="material-icons opacity-10">notifications</i> Pengumuman</h5>
                   <div class="text-end pe-3">
                     <a href="/pengumuman/create"><span class="material-icons text-white">post_add</span></a>
@@ -182,15 +182,17 @@
               </div>
               <div class="card-body">
                 <ul class="list-group">
-                  @foreach ($pengumuman as $item)
+                  @forelse ($pengumuman as $item)
                     <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
                       <div class="d-flex align-items-start flex-column justify-content-center">
                         <h6 class="mb-0 text-sm">{{Str::limit($item->judul, 20)}}</h6>
                         <p class="mb-0 text-xs">{{Str::limit($item->isi, 40)}}</p>
                       </div>
-                      <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto" href="/pengumuman/{{$item->id}}">Detail</a>
+                      <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto text-warning" href="/pengumuman/{{$item->id}}">Detail</a>
                     </li>
-                  @endforeach
+                  @empty
+                    <h4 class="text-center">Data tidak ada!</h4>
+                  @endforelse
                 </ul>
               </div>
             </div>

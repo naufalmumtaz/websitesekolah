@@ -16,7 +16,7 @@ class CreateMeetingsTable extends Migration
         Schema::create('meetings', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('link', 300);
-            $table->unsignedBigInteger('user_id');
+            $table->uuid('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });

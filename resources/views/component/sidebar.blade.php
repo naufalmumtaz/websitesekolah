@@ -26,7 +26,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/tables.html">
+          <a class="nav-link text-white " href="/meeting">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">calendar_month</i>
             </div>
@@ -34,15 +34,15 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/billing.html">
+          <a class="nav-link text-white " href="/pengumuman">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">message</i>
+              <i class="material-icons opacity-10">notifications</i>
             </div>
-            <span class="nav-link-text ms-1">Pesan</span>
+            <span class="nav-link-text ms-1">Pengumuman</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/virtual-reality.html">
+          <a class="nav-link text-white " href="/modul">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">book</i>
             </div>
@@ -50,19 +50,11 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/rtl.html">
+          <a class="nav-link text-white " href="/tugas">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">cases</i>
             </div>
             <span class="nav-link-text ms-1">Tugas Saya</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/notifications.html">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">notifications</i>
-            </div>
-            <span class="nav-link-text ms-1">Notifikasi</span>
           </a>
         </li>
         @if (auth()->user()->level=="admin")
@@ -78,7 +70,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white " href="../pages/profile.html">
+            <a class="nav-link text-white " href="/guru">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">group</i>
               </div>
@@ -86,7 +78,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white " href="../pages/profile.html">
+            <a class="nav-link text-white " href="/pegawai">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">people</i>
               </div>
@@ -106,7 +98,7 @@
           <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Halaman Akun</h6>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/profile.html">
+          <a class="nav-link text-white " href="/profile/{{auth()->user()->id}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">manage_accounts</i>
             </div>

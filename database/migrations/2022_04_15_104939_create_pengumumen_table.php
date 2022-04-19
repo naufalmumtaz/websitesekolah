@@ -17,7 +17,7 @@ class CreatePengumumenTable extends Migration
             $table->uuid('id')->primary();
             $table->string('judul', 200);
             $table->text('isi');
-            $table->unsignedBigInteger('user_id');
+            $table->uuid('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });

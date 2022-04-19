@@ -14,8 +14,11 @@
 
 // Auth::routes();
 Route::group(['namespace' => 'Auth'], function () {
-    Route::post('/login', 'LoginController');
-    Route::post('/register', 'RegisterController')->middleware('ceklevel:admin');
+    Route::get('/login', 'LoginController@showLoginForm')->middleware('guest')->name('login');
+    Route::post('/login', 'LoginController@login')->middleware('guest');
+    Route::get('/register', 'RegisterController@showRegistrationForm')->middleware('ceklevel:admin')->name('register');
+    Route::post('/register', 'RegisterController@register')->middleware('ceklevel:admin');
+    Route::post('/logout', 'LoginController@logout')->name('logout')->middleware(['auth', 'ceklevel:admin,user']);
 });
 
 Route::group(['middleware' => ['auth']], function () {
@@ -23,7 +26,7 @@ Route::group(['middleware' => ['auth']], function () {
     
     Route::resource('/kelas', 'KelasController')->middleware('ceklevel:admin');
     Route::resource('/siswa', 'SiswaController')->middleware('ceklevel:admin');
-    // Route::resource('/pengumuman', 'PengumumanController')->middleware('ceklevel:admin');
+    Route::resource('/pengumuman', 'PengumumanController')->middleware('ceklevel:admin');
 
     Route::get('/pengumuman', 'PengumumanController@index')->middleware('ceklevel:admin');
     Route::get('/pengumuman/create', 'PengumumanController@create')->middleware('ceklevel:admin');

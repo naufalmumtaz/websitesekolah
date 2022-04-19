@@ -7,7 +7,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="{{asset('admin/assets/img/apple-icon.png')}}">
   <link rel="icon" type="image/png" href="{{asset('admin/assets/img/favicon.png')}}">
   <title>
-    {{ config('app.name', 'Laravel') }} by Creative Tim
+    {{ config('app.name', 'Laravel') }} by Mumtaz Dev
   </title>
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
@@ -58,15 +58,15 @@
                         @csrf
                         <div class="input-group input-group-outline mb-3">
                         <label class="form-label" for="name">Nama</label>
-                        <input type="text" class="form-control" name="name" id="name" required autocomplete="off">
+                        <input type="text" class="form-control" name="name" id="name" required autocomplete="off" value="{{old('nama')}}">
                         </div>
                         <div class="input-group input-group-outline mb-3">
                           <label class="form-label" for="email">Email</label>
-                          <input type="email" class="form-control" name="email" id="email" required autocomplete="email">
+                          <input type="email" class="form-control" name="email" id="email" required autocomplete="email" value="{{old('email')}}">
                         </div>
                         <div class="input-group input-group-outline mb-3">
                           <label class="form-label" for="password">Password</label>
-                          <input type="password" class="form-control" name="password" id="password" required autocomplete="new-password">
+                          <input type="password" class="form-control" name="password" id="password" required autocomplete="new-password" value="{{old('password')}}">
                         </div>
                         <div class="input-group input-group-outline mb-3">
                           <label class="form-label" for="password-confirm">Konfirmasi Password</label>
@@ -74,7 +74,7 @@
                         </div>
                         <div class="input-group input-group-outline mb-3">
                         <label class="form-label" for="level">Level</label>
-                        <input type="text" class="form-control" name="level" id="level" required autocomplete="level">
+                        <input type="text" class="form-control" name="level" id="level" required autocomplete="level" value="{{old('level')}}">
                         </div>
                         <div class="text-center">
                         <button type="submit" class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">Register</button>

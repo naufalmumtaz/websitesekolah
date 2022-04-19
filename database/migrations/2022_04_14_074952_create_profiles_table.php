@@ -18,7 +18,7 @@ class CreateProfilesTable extends Migration
             $table->char('umur', 3);
             $table->string('alamat', 200);
             $table->text('bio');
-            $table->unsignedBigInteger('user_id');
+            $table->uuid('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             // $table->string('gambar', 200);
             $table->timestamps();

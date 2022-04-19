@@ -36,7 +36,7 @@
     <div class="card">
         <div class="card-body px-0 pb-2">
             <div class="table-responsive p-3">
-                <a href="/pengumuman/create" class="btn bg-gradient-success text-capitalize mb-4"><span class="material-icons">post_add</span> Tambah Pengumuman</a>
+                <a href="/pengumuman/create" class="btn bg-gradient-success text-capitalize mb-4"><span class="material-icons">notification_add</span> Tambah Pengumuman</a>
                 <table id="example" class="table table-striped table-hover" style="width:100%">
                     <thead>
                         <tr>

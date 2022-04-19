@@ -47,16 +47,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse ($pengumuman as $key=>$value)                            
+                        @forelse ($meeting as $key=>$value)                            
                             <tr>
                                 <td>{{$key + 1}}</td>
                                 <td class="text-wrap">{{$value->link}}</td>
                                 <td>{{$value->created_at}}</td>
                                 <td>
-                                    <form action="/pengumuman/{{$value->id}}" method="POST">
+                                    <form action="/meeting/{{$value->id}}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <a href="/pengumuman/{{$value->id}}/edit" class="btn bg-gradient-info text-capitalize"><span class="material-icons text-white">edit</span></a>
+                                        <a href="/meeting/{{$value->id}}/edit" class="btn bg-gradient-info text-capitalize"><span class="material-icons text-white">edit</span></a>
                                         <button type="submit" class="btn bg-gradient-danger text-capitalize ms-2"><span class="material-icons text-white">delete</span></button>
                                     </form>
                                 </td>
