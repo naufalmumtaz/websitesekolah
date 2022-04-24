@@ -19,7 +19,7 @@ class MeetingController extends Controller
             'link' => 'required|max:300',
     	]);
 
-        meeting::create([
+        Meeting::create([
     		'link' => $request->link,
             'user_id' => auth()->user()->id
     	]);

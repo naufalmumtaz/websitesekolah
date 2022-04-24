@@ -44,7 +44,7 @@
         <li class="nav-item">
           <a class="nav-link text-white " href="/modul">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">book</i>
+              <i class="material-icons opacity-10">bookmark</i>
             </div>
             <span class="nav-link-text ms-1">Modul Saya</span>
           </a>
@@ -52,7 +52,7 @@
         <li class="nav-item">
           <a class="nav-link text-white " href="/tugas">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">cases</i>
+              <i class="material-icons opacity-10">note</i>
             </div>
             <span class="nav-link-text ms-1">Tugas Saya</span>
           </a>

@@ -30,19 +30,19 @@
                 @csrf
                 <div class="input-group input-group-static my-3">
                     <label for="nis" class="ms-0">NIS</label>
-                    <input type="number" class="form-control" name="nis" id="nis" autocomplete="off">
+                    <input type="number" class="form-control" name="nis" id="nis" autocomplete="off" value="{{old('nis')}}" >
                 </div>
                 <div class="input-group input-group-static my-3">
                     <label for="nisn" class="ms-0">NISN</label>
-                    <input type="number" class="form-control" name="nisn" id="nisn" autocomplete="off">
+                    <input type="number" class="form-control" name="nisn" id="nisn" autocomplete="off" value="{{old('nisn')}}" >
                 </div>
                 <div class="input-group input-group-static my-3">
                     <label for="nama" class="ms-0">Nama</label>
-                    <input type="text" class="form-control" name="nama" id="nama" autocomplete="off">
+                    <input type="text" class="form-control" name="nama" id="nama" autocomplete="off" value="{{old('nama')}}" >
                 </div>
                 <div class="input-group input-group-static my-3">
                     <label for="alamat" class="ms-0">Alamat</label>
-                    <textarea class="form-control" name="alamat" rows="3" style="resize:none" autocomplete="off" id="alamat"></textarea>
+                    <textarea class="form-control" name="alamat" rows="3" style="resize:none" autocomplete="off" id="alamat">{{old('alamat')}}</textarea>
                 </div>
                 <div class="input-group input-group-static my-3">
                   <label for="kelas_id" class="ms-0">Kelas</label>

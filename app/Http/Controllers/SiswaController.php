@@ -26,7 +26,7 @@ class SiswaController extends Controller
     	]);
         
         $gambarName = time().'.'.$request->gambar->extension();  
-        $request->gambar->move(public_path('images'), $gambarName);
+        $request->gambar->move(public_path('files'), $gambarName);
  
         Siswa::create([
     		'nis' => $request->nis,
@@ -68,7 +68,7 @@ class SiswaController extends Controller
         if($request->has('gambar'))
         {
             $gambarName = time().'.'.$request->gambar->extension();  
-            $request->gambar->move(public_path('images'), $gambarName);
+            $request->gambar->move(public_path('files'), $gambarName);
 
             $siswa->nis = $request->nis;
             $siswa->nisn = $request->nisn;
@@ -94,7 +94,7 @@ class SiswaController extends Controller
     {
         $siswa = Siswa::find($id);
 
-        $path = 'images/';
+        $path = 'files/';
         File::delete($path . $siswa->gambar);
 
         $siswa->delete();

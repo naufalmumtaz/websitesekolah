@@ -36,14 +36,18 @@
     <div class="card">
         <div class="card-body px-0 pb-2">
             <div class="table-responsive p-3">
+                @if (auth()->user()->level=="admin")
                 <a href="/meeting/create" class="btn bg-gradient-success text-capitalize mb-4"><span class="material-icons">add_link</span> Tambah Meeting</a>
+                @endif
                 <table id="example" class="table table-striped table-hover" style="width:100%">
                     <thead>
                         <tr>
                             <th>#</th>
                             <th>Link</th>
                             <th>Tanggal Dibuat</th>
-                            <th>Tindakan</th>
+                            @if (auth()->user()->level=="admin")
+                                <th>Tindakan</th>
+                            @endif
                         </tr>
                     </thead>
                     <tbody>
@@ -52,6 +56,7 @@
                                 <td>{{$key + 1}}</td>
                                 <td class="text-wrap">{{$value->link}}</td>
                                 <td>{{$value->created_at}}</td>
+                                @if (auth()->user()->level=="admin")
                                 <td>
                                     <form action="/meeting/{{$value->id}}" method="POST">
                                         @csrf
@@ -60,6 +65,7 @@
                                         <button type="submit" class="btn bg-gradient-danger text-capitalize ms-2"><span class="material-icons text-white">delete</span></button>
                                     </form>
                                 </td>
+                                @endif
                             </tr>
                         @empty
                             

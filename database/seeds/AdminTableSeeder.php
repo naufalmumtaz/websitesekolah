@@ -12,6 +12,7 @@ class AdminTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
+            'id' => \Ramsey\Uuid\Uuid::uuid4()->toString(),
             'name' => 'admin',
             'level' => 'admin',
             'email' => 'admin@gmail.com',

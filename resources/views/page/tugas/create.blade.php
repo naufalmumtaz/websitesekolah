@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('judul')
-    Tambah Pengumuman
+    Tambah Tugas
 @endsection
 
 @section('content')
@@ -26,15 +26,24 @@
                     </button>
                 </div>
               @endif
-            <form action="/pengumuman" method="post">
+            <form action="/tugas" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="input-group input-group-static my-3">
-                    <label for="judul" class="ms-0">Judul</label>
-                    <input type="text" class="form-control" name="judul" id="judul" autocomplete="off" value="{{old('judul')}}" >
-                </div>
+                  <label for="judul" class="ms-0">Judul</label>
+                  <input type="text" class="form-control" name="judul" id="judul" autocomplete="off" value="{{old('judul')}}" >
+              </div>
+              <div class="input-group input-group-static my-3">
+                  <label for="file_tugas" class="ms-0">File</label>
+                  <input type="file" name="file_tugas" id="file_tugas">
+              </div>
                 <div class="input-group input-group-static my-3">
-                    <label for="isi" class="ms-0">Isi</label>
-                    <textarea class="form-control" name="isi" rows="3" style="resize:none" autocomplete="off" id="isi">{{old('isi')}}</textarea>
+                  <label for="materi_id" class="ms-0">Materi</label>
+                  <select class="form-control" name="materi_id" id="materi_id">
+                    <option value="">---Pilih Materi---</option>
+                    @foreach ($materi as $item)
+                      <option value="{{$item->id}}">{{$item->judul}}, Modul : {{$item->modul->judul}}</option>
+                    @endforeach
+                  </select>
                 </div>
                 <button class="btn bg-gradient-success text-capitalize">Tambah</button>
             </form>

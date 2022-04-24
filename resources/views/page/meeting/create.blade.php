@@ -30,7 +30,7 @@
                 @csrf
                 <div class="input-group input-group-static my-3">
                     <label for="link" class="ms-0">link</label>
-                    <input type="text" class="form-control" name="link" id="link" autocomplete="off">
+                    <input type="text" class="form-control" name="link" id="link" autocomplete="off" value="{{old('link')}}" >
                 </div>
                 <button class="btn bg-gradient-success text-capitalize">Tambah</button>
             </form>

@@ -23,7 +23,7 @@
 </head>
 <body>
     <main class="main-content  mt-0">
-        <div class="page-header align-items-start min-vh-100" style="background-image: url('https://images.unsplash.com/photo-1604134967494-8a9ed3adea0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');">
+        <div class="page-header align-items-start min-vh-100" style="background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/vintage-wallpaper.png');">
           <span class="mask bg-gradient-dark opacity-6"></span>
           <div class="container my-auto">
             <div class="row">
@@ -82,8 +82,8 @@
                       document.write(new Date().getFullYear())
                     </script>,
                     made with <i class="fa fa-heart" aria-hidden="true"></i> by
-                    <a href="https://www.creative-tim.com" class="font-weight-bold text-white" target="_blank">{{ config('app.name', 'Laravel') }}</a>
-                    for a better web.
+                    <a href="#" class="font-weight-bold text-white" target="_blank">Mumtaz Dev</a>
+                    for a <span class="font-weight-bold">{{ config('app.name', 'Laravel') }}</span>
                   </div>
                 </div>
                 <div class="col-12 col-md-6">

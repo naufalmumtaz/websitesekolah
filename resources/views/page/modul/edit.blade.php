@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('judul')
-    Tambah Pengumuman
+    Edit Modul
 @endsection
 
 @section('content')
@@ -26,17 +26,22 @@
                     </button>
                 </div>
               @endif
-            <form action="/pengumuman" method="post">
+            <form action="/modul/{{$modul->id}}" method="post" enctype="multipart/form-data">
                 @csrf
+                @method('PUT')
                 <div class="input-group input-group-static my-3">
-                    <label for="judul" class="ms-0">Judul</label>
-                    <input type="text" class="form-control" name="judul" id="judul" autocomplete="off" value="{{old('judul')}}" >
+                  <label for="judul" class="ms-0">Judul</label>
+                  <input type="text" class="form-control" name="judul" id="judul" autocomplete="off" value="{{$modul->judul}}" >
                 </div>
                 <div class="input-group input-group-static my-3">
-                    <label for="isi" class="ms-0">Isi</label>
-                    <textarea class="form-control" name="isi" rows="3" style="resize:none" autocomplete="off" id="isi">{{old('isi')}}</textarea>
+                    <label for="nama_guru" class="ms-0">Nama Guru</label>
+                    <input type="text" class="form-control" name="nama_guru" id="nama_guru" autocomplete="off" value="{{$modul->nama_guru}}">
                 </div>
-                <button class="btn bg-gradient-success text-capitalize">Tambah</button>
+                <div class="input-group input-group-static my-3">
+                  <label for="gambar" class="ms-0">Gambar</label>
+                  <input type="file" name="gambar" id="gambar">
+                </div>
+                <button class="btn bg-gradient-info text-capitalize">Edit</button>
             </form>
           </div>
         </div>

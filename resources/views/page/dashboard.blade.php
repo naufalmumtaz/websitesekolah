@@ -9,7 +9,7 @@
     <div class="row mt-5">
         <div class="col-xl-6 col-sm-6 mb-xl-0">
           <div class="card h-100">
-            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 mb-4">
               <div class="bg-gradient-warning shadow-warning border-radius-lg pt-4 pb-3">
                 <h5 class="text-white text-capitalize ps-3"><i class="material-icons opacity-10">notifications</i> Pengumuman</h5>
               </div>
@@ -38,7 +38,7 @@
         </div>
         <div class="col-xl-6 col-sm-6 mb-xl-0">
           <div class="card h-100">
-            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 mb-4">
               <div class="bg-gradient-success shadow-success border-radius-lg pt-4 pb-3">
                 <h5 class="text-white text-capitalize ps-3"><i class="material-icons opacity-10">calendar_month</i> Ruang Meeting</h5>
               </div>
@@ -53,10 +53,10 @@
                           </tr>
                       </thead>
                       <tbody>
-                        @foreach ($pengumuman as $item)
+                        @foreach ($meeting as $item)
                           <tr>
                               <td>{{$item->created_at}}</td>
-                              <td class="text-wrap"><a href="/meeting/{{$item->id}}">{{Str::limit($item->judul, 20)}}</a></td>
+                              <td class="text-wrap"><a href="/meeting/{{$item->id}}">{{Str::limit($item->link, 20)}}</a></td>
                           </tr>
                         @endforeach
                       </tbody>
@@ -67,7 +67,7 @@
         </div>
         <div class="col-xl-6 col-sm-6 mb-xl-0 mt-5">
           <div class="card h-100">
-            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 mb-4">
               <div class="bg-gradient-info shadow-info border-radius-lg pt-4 pb-3">
                 <h5 class="text-white text-capitalize ps-3"><i class="material-icons opacity-10">calendar_month</i> Tugas Tertunda</h5>
               </div>

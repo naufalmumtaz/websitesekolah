@@ -36,7 +36,9 @@
     <div class="card">
         <div class="card-body px-0 pb-2">
             <div class="table-responsive p-3">
+                @if (auth()->user()->level=="admin")
                 <a href="/pengumuman/create" class="btn bg-gradient-success text-capitalize mb-4"><span class="material-icons">notification_add</span> Tambah Pengumuman</a>
+                @endif
                 <table id="example" class="table table-striped table-hover" style="width:100%">
                     <thead>
                         <tr>
@@ -44,7 +46,9 @@
                             <th>Judul</th>
                             <th>Isi</th>
                             <th>Tanggal Dibuat</th>
+                            @if (auth()->user()->level=="admin")
                             <th>Tindakan</th>
+                            @endif
                         </tr>
                     </thead>
                     <tbody>
@@ -54,6 +58,7 @@
                                 <td class="text-wrap">{{$value->judul}}</td>
                                 <td class="text-wrap">{{$value->isi}}</td>
                                 <td>{{$value->created_at}}</td>
+                                @if (auth()->user()->level=="admin")
                                 <td>
                                     <form action="/pengumuman/{{$value->id}}" method="POST">
                                         @csrf
@@ -62,6 +67,7 @@
                                         <button type="submit" class="btn bg-gradient-danger text-capitalize ms-2"><span class="material-icons text-white">delete</span></button>
                                     </form>
                                 </td>
+                                @endif
                             </tr>
                         @empty
                             

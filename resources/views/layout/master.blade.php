@@ -7,7 +7,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="{{asset('admin/assets/img/apple-icon.png')}}">
   <link rel="icon" type="image/png" href="{{asset('admin/assets/img/favicon.png')}}">
   <title>
-    {{ config('app.name', 'Laravel') }} by Creative Tim
+    {{ config('app.name', 'Laravel') }} by Mumtaz Dev
   </title>
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
@@ -23,7 +23,7 @@
   @stack('style')
 </head>
 
-<body class="g-sidenav-show  bg-gray-200">
+<body class="g-sidenav-show bg-gray-200">
     @include('component.sidebar')
 
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
@@ -50,8 +50,8 @@
                   document.write(new Date().getFullYear())
                 </script>,
                 made with <i class="fa fa-heart"></i> by
-                <a href="#" class="font-weight-bold" target="_blank">{{ config('app.name', 'Laravel') }}</a>
-                for a better web.
+                <a href="#" class="font-weight-bold text-dark" target="_blank">Mumtaz Dev</a>
+                for a <span class="font-weight-bold">{{ config('app.name', 'Laravel') }}</span>
               </div>
             </div>
             <div class="col-lg-6">
